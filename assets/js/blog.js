@@ -126,9 +126,8 @@ const showError = (container, message) => {
 };
 
 const postUrl = (slug) => {
-  const url = new URL("post.html", blogDirectory);
-  url.hash = slug;
-  return `${url.pathname}${url.hash}`;
+  const postPage = new URL("post.html", blogDirectory);
+  return `${postPage.pathname}#${encodeURIComponent(slug)}`;
 };
 
 const requestedPostSlug = () => {
