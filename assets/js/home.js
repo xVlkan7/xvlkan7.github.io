@@ -21,7 +21,8 @@ if (contactButton) {
       "FN:Adrian Zeni",
       "N:Zeni;Adrian;;;",
       "EMAIL;TYPE=INTERNET:azeni7@outlook.com",
-      "URL:https://github.com/xVlkan7",
+      "URL:https://xvlkan7.github.io",
+      "TEL;TYPE=CELL:+19085146922",
       "END:VCARD",
     ].join("\r\n");
     const url = URL.createObjectURL(

@@ -1,12 +1,16 @@
 const skills = [
-  { name: "Python", icon: "_" },
-  { name: "JavaScript", icon: "_" },
-  { name: "Backend systems", icon: "_" },
-  { name: "REST APIs", icon: "_" },
-  { name: "SQL & data", icon: "_" },
-  { name: "Web development", icon: "_" },
-  { name: "HTML & CSS", icon: "_" },
-  { name: "Problem solving", icon: "_" },
+  { name: "Problem solving", icon: "problem-solving.svg" },
+  { name: "Web Development", icon: "computer.svg" },
+  { name: "TypeScript", icon: "typescript.svg" },
+  { name: "HTML & CSS", icon: "html-css.svg" },
+  { name: "Angular", icon: "angular.svg" },
+  { name: "React", icon: "react.svg" },
+  { name: "Python", icon: "python.svg" },
+  { name: "SQL + Data", icon: "sql.svg" },
+  { name: "z/OS Mainframes", icon: "ibm-z.svg" },
+  { name: "Excel", icon: "excel.svg" },
+  { name: "Financial Analysis", icon: "money.svg" },
+  { name: "Quantitative Finance", icon: "graph.svg" },
 ];
 
 document.querySelectorAll("[data-skills]").forEach((list) => {
@@ -17,7 +21,14 @@ document.querySelectorAll("[data-skills]").forEach((list) => {
 
     iconSlot.className = "tag-icon";
     iconSlot.setAttribute("aria-hidden", "true");
-    iconSlot.textContent = icon;
+    if (icon.endsWith(".svg")) {
+      const image = document.createElement("img");
+      image.src = new URL(`../icons/${icon}`, document.currentScript.src);
+      image.alt = "";
+      iconSlot.append(image);
+    } else {
+      iconSlot.textContent = icon;
+    }
     label.textContent = name;
     item.append(iconSlot, label);
     list.append(item);
