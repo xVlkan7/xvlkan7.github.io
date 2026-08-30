@@ -4,6 +4,22 @@ const projects = [
     url: "https://github.com/xVlkan7/drone-proj",
     visibleTitle: "Drone Project",
   },
+  {
+    url: "https://github.com/xVlkan7/spxcoin",
+    visibleTitle: "SPX Coin - Stablecoin",
+  },
+  {
+    url: "https://github.com/xVlkan7/voiceGPT",
+    visibleTitle: "VoiceGPT",
+  },
+  {
+    url: "https://github.com/xVlkan7/software-engineering",
+    visibleTitle: "SWE Capstone Project - HPU",
+  },
+  {
+    url: "https://github.com/xVlkan7/leetcode",
+    visibleTitle: "Leetcode Solutions",
+  },
 ];
 
 const projectContainer = document.querySelector("[data-projects]");
